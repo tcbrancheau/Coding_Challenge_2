@@ -8,8 +8,7 @@ class WFRTest(unittest.TestCase):
 
     def setUp(self) -> None:
         """
-
-        :return:
+        For each test, a new WordFinderReverser object will be created.
         """
         self.wfr = WordFinderReverser()
 
@@ -53,8 +52,9 @@ class WFRTest(unittest.TestCase):
 
     def test_print_words_reverses_one_long_word(self):
         """
-
-        :return:
+        Test that when one long word is detected, it is printed and reversed
+        by print_words_reverses.  This test also ensures no other words are
+        processed.
         """
         test_input = io.StringIO()
         test_input.write('Fourth\n')
@@ -82,8 +82,9 @@ class WFRTest(unittest.TestCase):
 
     def test_print_words_reverses_three_long_words(self):
         """
-
-        :return:
+        Test that when three long words are detected, they are printed and
+        reversed by print_words_reverses.  This test also ensures no other
+        words are processed.
         """
         test_input = io.StringIO()
         test_input.write('Fourth\n')
@@ -139,7 +140,7 @@ class WFRTest(unittest.TestCase):
     def test_reverse_word_int_input(self):
         """
         Tests data type checking of reverse_word() to ensure it does not accept
-        int as input
+        int as input.
         """
         expected_response = "Cannot reverse 12 as it is not a string. It is a <class 'int'>.\n"
 
@@ -166,7 +167,9 @@ class WFRTest(unittest.TestCase):
 
     def test_read_file_print_words_reverses_no_words(self):
         """
-        This test method ensures LongWordFinder.read_file is working.
+        This test method ensures produces no output when no long words are
+        detected in the input.  For this test, the input is just whitespace
+        characters.
         """
         test_input = io.StringIO()
         test_input.write('\n')
@@ -200,7 +203,8 @@ class WFRTest(unittest.TestCase):
 
     def test_read_file_print_words_reverses_no_data(self):
         """
-        This test method ensures LongWordFinder.read_file is working.
+        This test method ensures produces no output when no long words are
+        detected in the input.  For this test, the input is nothing.
         """
         test_input = io.StringIO()
 

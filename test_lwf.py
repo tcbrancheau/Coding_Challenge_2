@@ -7,6 +7,9 @@ import unittest
 class LWFTest(unittest.TestCase):
 
     def setUp(self) -> None:
+        """
+        For each test, a new LongWordFinder object will be created.
+        """
         self.lwf = LongWordFinder()
 
     # Positive Tests
@@ -155,10 +158,13 @@ class LWFTest(unittest.TestCase):
     # Negative Tests
     def test_read_file_print_long_words_no_words(self):
         """
-        This test method ensures LongWordFinder.read_file is working.
+        This test makes sure no long words are found when the test input
+        only contains whitespace characters.  It also ensures the
+        print_long_words method responds with a message indicating there
+        no data to process.
         """
         test_input = io.StringIO()
-        test_input.write('\n')
+        test_input.write('\t\n')
         test_input.write('\n')
         test_input.write('\n')
         test_input.seek(0)  # reset stream position back to beginning
@@ -189,7 +195,10 @@ class LWFTest(unittest.TestCase):
 
     def test_read_file_print_long_words_no_data(self):
         """
-        This test method ensures LongWordFinder.read_file is working.
+        This test makes sure no long words are found when the test input
+        that contains no characters.  It also ensures the
+        print_long_words method responds with a message indicating there
+        no data to process.
         """
         test_input = io.StringIO()
 

@@ -2,6 +2,8 @@ import sys
 from word_finder_reverser import WordFinderReverser
 
 if __name__ == "__main__":
+    # This script reads in a filename from the commandline
+    # and processes that file using WordFinderReverser
     if len(sys.argv) == 1:
         data_file_name = "data01.txt"
     else:
