@@ -2,8 +2,8 @@ Prerequisites:
 This project was created using Python 3.9.6.
 
 Installation:
-To install this project, clone "Secureworks_Coding_Challenge" from
-https://github.com/tcbrancheau/Secureworks_Coding_Challenge.git to a
+To install this project, clone "Coding_Challenge_2" from
+https://github.com/tcbrancheau/Coding_Challenge_2.git to a
 directory on your machine.
 
 Running:
